@@ -1,0 +1,71 @@
+simulation:
+  timestep_minutes: 15
+  reserve_kwh: 8.0
+  max_charging_rate_kw: 7.0
+  battery_capacity_kwh: 60.0
+  days: 45
+  users: 80
+  history_days: 14
+  random_seed: 42
+
+scenarios:
+  low:
+    users: 50
+    days: 30
+    session_probability: 0.38
+    community_power_cap_kw: 140.0
+    exception_probability: 0.04
+    cooperation_probability: 0.12
+    energy_multiplier: 0.96
+    initial_energy_min_kwh: 10.0
+    initial_energy_max_fraction: 0.60
+  medium:
+    users: 80
+    days: 45
+    session_probability: 0.48
+    community_power_cap_kw: 150.0
+    exception_probability: 0.08
+    cooperation_probability: 0.16
+    energy_multiplier: 1.04
+    initial_energy_min_kwh: 7.0
+    initial_energy_max_fraction: 0.52
+  high:
+    users: 120
+    days: 60
+    session_probability: 0.60
+    community_power_cap_kw: 120.0
+    exception_probability: 0.16
+    cooperation_probability: 0.24
+    duration_multiplier: 0.90
+    energy_multiplier: 1.10
+    initial_energy_min_kwh: 4.0
+    initial_energy_max_fraction: 0.46
+    exception_duration_multiplier_low: 0.38
+    exception_duration_multiplier_high: 0.68
+    exception_extra_kwh_low: 10.0
+    exception_extra_kwh_high: 22.0
+
+policy_weights:
+  remaining_demand: 0.11492878439929571
+  urgency: 0.30883637595736796
+  fairness: 0.17057448069022324
+  acceptance: 0.15256923306077544
+  exception_penalty: 0.13666743378820465
+  cooperation_credit: 0.1164236921041329
+
+cooperation:
+  credit_per_kwh: 0.08
+  max_credit: 1.0
+  daily_decay: 0.92
+  max_score_bonus: 0.18
+
+exception:
+  emergency_cap_fraction: 0.60
+  score_sharpness: 1.0
+  frequent_request_threshold: 3
+  penalty_per_extra_request: 0.06
+  max_penalty: 0.24
+
+tuning:
+  trials: 120
+  seed: 42

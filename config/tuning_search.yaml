@@ -1,0 +1,17 @@
+weights:
+  remaining_demand: [0.15, 0.45]
+  urgency: [0.15, 0.45]
+  fairness: [0.05, 0.30]
+  acceptance: [0.02, 0.22]
+  exception_penalty: [0.02, 0.20]
+  cooperation_credit: [0.02, 0.22]
+
+objective:
+  average_charging_completion_rate: 1.20
+  basic_reserve_achievement_rate: 1.35
+  exceptional_demand_satisfaction_rate: 0.90
+  jain_fairness_index: 0.90
+  cooperation_participation_rate: 0.20
+  average_time_to_basic_reserve_hours: -0.25
+  potential_acceptance_pressure: -0.70
+  physical_violation_count: -10.0
