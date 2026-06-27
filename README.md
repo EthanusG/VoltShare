@@ -92,3 +92,6 @@ This writes:
 ```bash
 .venv/bin/python -m pytest
 ```
+
+---
+*Built by Ethan G*
